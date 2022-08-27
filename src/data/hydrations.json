@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "title": "Water",
+    "icon": "/img/beaker/icon-beaker-water.png"
+  },
+  {
+    "id": 1,
+    "title": "Poison",
+    "icon": "/img/beaker/icon-beaker-poison.png"
+  },
+  {
+    "id": 2,
+    "title": "Mead",
+    "icon": "/img/beaker/icon-beaker-mead.png"
+  },
+  {
+    "id": 3,
+    "title": "Bloodsap",
+    "icon": "/img/beaker/icon-beaker-bloodsap.png"
+  }
+]

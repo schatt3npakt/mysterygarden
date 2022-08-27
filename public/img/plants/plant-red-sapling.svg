@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 27 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-25,-129)">
+        <g transform="matrix(0.642879,0,0,0.642879,-525.491,82.2499)">
+            <g id="plant-red-sapling">
+                <g id="Layer0_27_FILL">
+                    <path d="M898.2,75.7C898.233,75.5 898.183,75.3 898.05,75.1C897.95,74.833 897.767,74.633 897.5,74.5C893.533,72.5 889.167,72.567 884.4,74.7C884.167,74.767 883.983,74.9 883.85,75.1C881.15,80.033 879.2,84.933 878,89.8C876.767,84.933 874.8,80.05 872.1,75.15C872,74.95 871.833,74.8 871.6,74.7C866.833,72.6 862.45,72.567 858.45,74.6C858.217,74.7 858.05,74.867 857.95,75.1C857.817,75.3 857.767,75.517 857.8,75.75C859.5,84.85 866.05,91.567 877.45,95.9C877.717,96 877.967,96.017 878.2,95.95C878.3,95.917 878.4,95.883 878.5,95.85C889.933,91.483 896.5,84.767 898.2,75.7Z" style="fill:rgb(221,78,84);fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,78 @@
+
+[
+  {
+    "id": 0,
+    "title": "Blightleaf",
+    "description": "You'll know it when you smell it. Black seed, the plant itself is crimson. For better or worse, it grows with pretty much anything.",
+    "icon": "/img/plants/seed-black.svg",
+    "stateImages": {
+      "sapling": "/img/plants/plant-red-sapling.svg",
+      "young": "/img/plants/plant-red-young.svg",
+      "grown": "/img/plants/plant-red-grown.svg"
+    },
+    "requirements": {
+      "hydrationIds": [0, 1, 2, 3],
+      "runeIds": [0, 1, 2, 3]
+    }
+  },
+  {
+    "id": 1,
+    "title": "Fool's Thistle",
+    "description": "Named after clumsy apprentices that are not careful while harvesting. A bright green herb that only grows on mead.",
+    "icon": "/img/plants/seed-green.svg",
+    "stateImages": {
+      "sapling": "/img/plants/plant-green-sapling.svg",
+      "young": "/img/plants/plant-green-young.svg",
+      "grown": "/img/plants/plant-green-grown.svg"
+    },
+    "requirements": {
+      "hydrationIds": [2],
+      "runeIds": [0, 1, 2, 3]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Hogsfeet",
+    "description": "Despite its' name, Hogsfeet is quite delicious in stews. The herb has a pleasant blue. Bless to success!",
+    "icon": "/img/plants/seed-star-blue.svg",
+    "stateImages": {
+      "sapling": "/img/plants/plant-blue-sapling.svg",
+      "young": "/img/plants/plant-blue-young.svg",
+      "grown": "/img/plants/plant-blue-grown.svg"
+    },
+    "requirements": {
+      "hydrationIds": [0, 1, 2, 3],
+      "runeIds": [0]
+    }
+  },
+  {
+    "id": 3,
+    "title": "Weed of Fortune",
+    "description": "A bright, golden herb. Actually surprisingly worthless. It sprouts in poisonous soil.",
+    "icon": "/img/plants/seed-star-yellow.svg",
+    "stateImages": {
+      "sapling": "/img/plants/plant-yellow-sapling.svg",
+      "young": "/img/plants/plant-yellow-young.svg",
+      "grown": "/img/plants/plant-yellow-grown.svg"
+    },
+    "requirements": {
+      "hydrationIds": [1],
+      "runeIds": [0, 1, 2, 3]
+    }
+  },
+  {
+    "id": 4,
+    "title": "Doomwood",
+    "description": "A small, black shrub. It only grows on Bloodsap, tastes like licorice and is generally awful. The necessary spell isn't too pleasant either.",
+    "icon": "/img/plants/seed-star-black.svg",
+    "stateImages": {
+      "sapling": "/img/plants/plant-black-sapling.svg",
+      "young": "/img/plants/plant-black-young.svg",
+      "grown": "/img/plants/plant-black-grown.svg"
+    },
+    "requirements": {
+      "hydrationIds": [3],
+      "runeIds": [3]
+    }
+  }
+]

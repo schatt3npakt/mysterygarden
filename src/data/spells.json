@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "title": "Blessing",
+    "icon": "/img/runes/rune-1.png"
+  },
+  {
+    "id": 1,
+    "title": "Courage",
+    "icon": "/img/runes/rune-2.png"
+  },
+  {
+    "id": 2,
+    "title": "Mindfulness",
+    "icon": "/img/runes/rune-3.png"
+  },
+  {
+    "id": 3,
+    "title": "Damnation",
+    "icon": "/img/runes/rune-4.png"
+  }
+]

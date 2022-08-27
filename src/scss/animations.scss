@@ -1,0 +1,37 @@
+@keyframes bg-animation-tl-br {
+  from {
+    background-position: top left;
+  }
+
+  to {
+    background-position: bottom right;
+  }
+}
+
+@keyframes bg-animation-tr-bl {
+  from {
+    background-position: top right;
+  }
+
+  to {
+    background-position: bottom left;
+  }
+}
+
+@keyframes bg-animation-tr-tl {
+  from {
+    background-position: top right;
+  }
+
+  to {
+    background-position: top left;
+  }
+}
+
+$bg-animation-timing: 10s linear infinite;
+// $bg-tl-br: bg-animation-tl-br $bg-animation-timing;
+// $bg-tr-bl: bg-animation-tr-bl $bg-animation-timing;
+// $bg-tr-tl: bg-animation-tr-tl $bg-animation-timing;
+$bg-tl-br: none;
+$bg-tr-bl: none;
+$bg-tr-tl: none;

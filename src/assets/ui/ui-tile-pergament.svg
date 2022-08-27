@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 92 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-34,-424)">
+        <path id="ui-tile-pergament" d="M34,491.7L35.75,490L34,488.25L34,426.95C34.033,424.983 35.05,424 37.05,424L78.6,424L81.5,426.9L84.35,424L122.9,424C124.933,424 125.967,424.983 126,426.95L126,437.6L123.9,439.75L122.9,440.75L126,443.85L126,499L122.9,502.15L121.9,503.15L126,507.25L126,512.95C126,514.983 124.967,516 122.9,516L50.25,516L48.05,513.8L45.85,516L37.05,516C35.017,516 34,514.983 34,512.95L34,502.25L36.8,499.45L34,496.65L34,491.7Z" style="fill:rgb(236,227,206);fill-rule:nonzero;"/>
+    </g>
+</svg>

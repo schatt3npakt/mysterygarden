@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-36,-309)">
+        <g transform="matrix(0.517583,0,0,0.517583,-370.815,45.7995)">
+            <g id="plant-black-sapling">
+                <g id="Layer0_129_FILL">
+                    <path d="M807.05,540C805.617,536.367 803.483,533.583 800.65,531.65C796.983,529.217 792.15,528.183 786.15,528.55L795.8,540L807.05,540M810.45,540L811.85,540L821.9,508.8C812.233,511.6 805.483,518.217 801.65,528.65C801.517,529.017 801.4,529.4 801.3,529.8C805.4,532 808.45,535.4 810.45,540Z" style="fill:rgb(58,112,128);fill-rule:nonzero;"/>
+                    <path d="M801.3,529.8C801.067,530.4 800.85,531.017 800.65,531.65C803.483,533.583 805.617,536.367 807.05,540L810.45,540C808.45,535.4 805.4,532 801.3,529.8Z" style="fill:rgb(44,84,96);fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

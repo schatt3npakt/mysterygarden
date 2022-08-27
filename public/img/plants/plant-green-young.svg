@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 27 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-86,-167)">
+        <g transform="matrix(0.594039,0,0,0.712907,-334.258,24.2408)">
+            <g id="plant-green-young">
+                <g id="Layer0_58_FILL">
+                    <path d="M718.55,244L725.25,244C724.783,229.167 719.017,216.383 707.95,205.65L707.9,205.65C717.133,216.383 720.683,229.167 718.55,244M752.1,200.45L752,200.45C739.4,212.65 732.867,227.167 732.4,244L739.9,244C737.5,227.167 741.567,212.65 752.1,200.45Z" style="fill:rgb(64,159,110);fill-rule:nonzero;"/>
+                    <path d="M732.4,244C732.867,227.167 739.4,212.65 752,200.45C740.5,203.617 732.6,212.817 728.3,228.05C724.367,215.783 717.583,208.317 707.95,205.65C719.017,216.383 724.783,229.167 725.25,244L732.4,244Z" style="fill:rgb(73,180,126);fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
