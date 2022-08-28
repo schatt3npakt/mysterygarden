@@ -1,4 +1,11 @@
 <template>
+  <div class="update-hint" v-if="updateExists">
+    {{ text.updateAvailable[language] }}
+    <button @click="refreshApp">
+      {{ text.update[language] }}
+    </button>
+  </div>
+
   <img class="mg-logo" src="/img/mg-logo.png" alt="" />
 
   <router-view v-slot="{ Component }">
@@ -24,6 +31,7 @@ export default {
 </script>
 
 <style lang="scss">
+@use "./scss/zIndex";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;900&display=swap");
 
 .fade-enter-active,
@@ -79,7 +87,7 @@ body {
   left: 50%;
   max-width: 400px;
   transform: translate(-50%, -50%);
-  z-index: -1;
+  z-index: zIndex.$mysteryGardenLogo;
 }
 
 .kenney-logo {
@@ -94,7 +102,7 @@ body {
   clip-path: circle(150vw);
   animation: 1.5s reveal forwards ease-in-out;
   animation-delay: 1.5s;
-  z-index: 10;
+  z-index: zIndex.$kenneyLogo;
 
   img {
     display: block;
