@@ -85,27 +85,14 @@ NOW:
 <!-- - Logo? -->
 
 Later:
-- cleanup bg animation
 - shuffle herbs in garden view
 - new herb packs with gold
-- procedural plants
-- new habitats with gold
-- cloud effects in garden, shadows for the fence and plants
 - plants need time to grow
 - multiple languages
 - TUTORIAL
 - story
 - Refactoring // sprechender Code
-- almanach trigger
-- fireflies for light / dark mode
-- light / darkmode
 - Depth of field trough blurs, gradients for sunlight / moonlight
 - plants and small patches of grass, ambience stuffm brids?
-- layer transition
-- savestate persistance
 - music selection, safari layer
-- favicon
-- pwa optimization
 - desktop styling
-- gamepad support
-- svgs for everything
