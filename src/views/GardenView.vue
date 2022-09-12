@@ -388,6 +388,7 @@ export default {
 
       &.active {
         img {
+          transition: filter 0.25s ease-in-out;
           filter: drop-shadow(3px 0 0 white) drop-shadow(-3px 0 0 white)
             drop-shadow(0 3px 0 white) drop-shadow(0 -3px 0 white);
         }
@@ -397,6 +398,7 @@ export default {
         height: 50px;
         width: 50px;
         object-fit: contain;
+        filter: drop-shadow(0 5px 1px rgba(0, 0, 0, 0.2));
       }
 
       span {
@@ -405,6 +407,7 @@ export default {
         font-weight: 900;
         font-size: 16px;
         margin-top: 0;
+        filter: drop-shadow(0 5px 1px rgba(0, 0, 0, 0.2));
       }
     }
   }

@@ -1,6 +1,14 @@
 {
-  "almanach": {
-    "en": "Almanach",
-    "de": "Kräuterbuch"
+  "options": {
+    "en": "Options",
+    "de": "Optionen"
+  },
+  "english": {
+    "en": "English",
+    "de": "Englisch"
+  },
+  "german": {
+    "en": "German",
+    "de": "Deutsch"
   }
 }

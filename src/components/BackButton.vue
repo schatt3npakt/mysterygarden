@@ -1,10 +1,22 @@
 <template>
-  <router-link class="back-button" :to="'/'">Home</router-link>
+  <router-link class="back-button" :to="'/'">{{
+    translations.home[language]
+  }}</router-link>
 </template>
 
 <script>
 export default {
   name: "BackButton",
+  data() {
+    return {
+      translations: require("@/translations/BackButton.json"),
+    };
+  },
+  computed: {
+    language() {
+      return this.$store.state.language;
+    },
+  },
 };
 </script>
 
