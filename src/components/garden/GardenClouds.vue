@@ -41,11 +41,10 @@ export default {
 
   &::before {
     top: 200px;
-    animation-delay: 10s;
-    animation: clouds 35s infinite linear alternate-reverse;
+    animation: clouds 300s infinite linear alternate-reverse;
 
     @media (min-width: 720px) {
-      animation: clouds 65s infinite linear alternate-reverse;
+      animation: clouds 410s infinite linear alternate-reverse;
     }
   }
 }

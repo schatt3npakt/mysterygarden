@@ -8,7 +8,7 @@
 
   <img class="mg-logo" src="/img/mg-logo.png" alt="" />
 
-  <router-view v-slot="{ Component }">
+  <router-view class="view" v-slot="{ Component }">
     <transition name="fade" mode="out-in">
       <component :is="Component" />
     </transition>
@@ -36,12 +36,12 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: transform 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
-  transform: rotateY(90deg);
+  opacity: 0;
 }
 
 .fade-enter-to {
@@ -117,6 +117,10 @@ body {
       max-width: 320px;
     }
   }
+}
+
+.view {
+  overflow: hidden;
 }
 
 @keyframes intro {

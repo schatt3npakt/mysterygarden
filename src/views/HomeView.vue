@@ -6,25 +6,34 @@
       <router-link v-for="(route, i) in routes" :key="i" :to="route.path">
         <img :src="route.icon" alt="" />
 
-        <span>{{ route.title }}</span>
+        <span>{{ translations[route.name][language] }}</span>
       </router-link>
     </div>
 
     <div class="vue-teaser">
-      Made with <br />
+      {{ translations["madeWith"][language] }} <br />
       <img src="/img/vue-logo.png" alt="" />
     </div>
   </div>
 </template>
 
 <script>
-const hiddenRoutes = ["home", "options", "win"];
+const hiddenRoutes = ["home", "win"];
+
 export default {
+  data() {
+    return {
+      translations: require("@/translations/Home.json"),
+    };
+  },
   computed: {
     routes() {
       return this.$router.options.routes.filter(
         (item) => !hiddenRoutes.includes(item.name)
       );
+    },
+    language() {
+      return this.$store.state.language;
     },
   },
   name: "HomeView",
@@ -37,7 +46,7 @@ export default {
 .logo {
   margin: 0 auto 50px auto;
   width: 100%;
-  max-width: 500px;
+  max-width: 300px;
 }
 
 .main-menu {
@@ -49,10 +58,15 @@ export default {
 
   &__buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     margin: auto;
     max-width: 300px;
     row-gap: 80px;
+
+    @media (min-width: 720px) {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 450px;
+    }
 
     a {
       transform: scale(1);
@@ -79,7 +93,7 @@ export default {
     > * {
       background-size: 100% 100%;
       cursor: pointer;
-      height: 90px;
+      height: 50px;
       margin: auto;
       position: relative;
       width: 100px;
@@ -88,22 +102,33 @@ export default {
       filter: drop-shadow(2px 0 0 white) drop-shadow(-2px 0 0 white)
         drop-shadow(0 2px 0 white) drop-shadow(0 -2px 0 white);
 
+      @media (min-width: 720px) {
+        height: 90px;
+      }
+
       &:hover {
         transform: scale(1.05);
       }
 
       > img {
         display: block;
-        filter: drop-shadow(2px 0 0 white) drop-shadow(-2px 0 0 white)
-          drop-shadow(0 2px 0 white) drop-shadow(0 -2px 0 white);
+        filter: drop-shadow(1px 0 0 white) drop-shadow(-1px 0 0 white)
+          drop-shadow(0 1px 0 white) drop-shadow(0 -1px 0 white);
         left: 50%;
-        width: 80px;
-        height: 80px;
+        width: 50px;
+        height: 50px;
         object-fit: contain;
         max-width: 75%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
+
+        @media (min-width: 720px) {
+          filter: drop-shadow(2px 0 0 white) drop-shadow(-2px 0 0 white)
+            drop-shadow(0 2px 0 white) drop-shadow(0 -2px 0 white);
+          height: 80px;
+          width: 80px;
+        }
       }
 
       > span {

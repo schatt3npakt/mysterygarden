@@ -1,0 +1,52 @@
+{
+  "blightleaf": {
+    "title": {
+      "en": "Blightleaf",
+      "de": "Faulblatt"
+    },
+    "description": {
+      "en": "You'll know it when you smell it. Black seed, the plant itself is crimson. For better or worse, it grows with pretty much anything.",
+      "de": "Erkennt man schnell am Geruch. Schwarzes Saatgut, aber die Pflanze ist rot. Die Pflanze wächst mit so ziemlich allem."
+    }
+  },
+  "foolsThistle": {
+    "title": {
+      "en": "Fool's Thistle",
+      "de": "Idiotendistel"
+    },
+    "description": {
+      "en": "Named after clumsy apprentices that are not careful while harvesting. A bright green herb that only grows on mead",
+      "de": "Benannt nach unvorsichtigen Lehrlingen die sich beim ernten stechen. Ein leuchtend grünes Kraut dass mit Met wächst."
+    }
+  },
+  "hogsfeet": {
+    "title": {
+      "en": "Hogsfeet",
+      "de": "Schweinefüßchen"
+    },
+    "description": {
+      "en": "Despite its' name, Hogsfeet is quite delicious in stews. The herb has a pleasant blue. Bless to success!",
+      "de": "Man denkt es bei dem Namen nicht, aber Schweinefüßchen schmeckt herrlich in Eintopf! Ein angenehm blaues Kraut. Mit Segen klappt's!"
+    }
+  },
+  "weedOfFortune": {
+    "title": {
+      "en": "Weed of Fortune",
+      "de": "Kraut des Wohlstands"
+    },
+    "description": {
+      "en": "A bright, golden herb. Actually surprisingly worthless. It sprouts in poisonous soil.",
+      "de": "Ein hellgoldenes Gewächs. Erstaunlich wertlos. Es wächst in giftigem Boden."
+    }
+  },
+  "doomwood": {
+    "title": {
+      "en": "Doomwood",
+      "de": "Fürchterholz"
+    },
+    "description": {
+      "en": "A small, black shrub. It only grows on Bloodsap, tastes like licorice and is generally awful. The necessary spell isn't too pleasant either",
+      "de": "Ein kleiner, schwarzer Busch. Es wächst nur mit Blutharz, schmeckt nach Lakritz und ist auch sonst einfach furchtbar. Der nötige Zauberspruch ist auch nicht sehr erfreulich."
+    }
+  }
+}

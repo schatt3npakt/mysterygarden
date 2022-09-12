@@ -351,16 +351,10 @@ export default {
   width: 100%;
   max-width: 720px;
   height: 120px;
-  background-image: url("../assets/ui/ui-bg.png");
-  border-top: 3px solid white;
-  box-shadow: 0 0 15px 15px rgba(37, 34, 49, 0.1);
   transform: translateX(-50%);
   z-index: zIndex.$gardenUi;
 
   @media (min-width: 720px) {
-    border: none;
-    box-shadow: none;
-    border: 2px solid white;
     bottom: -2px;
   }
 

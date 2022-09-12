@@ -1,0 +1,26 @@
+{
+  "almanach": {
+    "en": "Almanach",
+    "de": "Kräuterbuch"
+  },
+  "tasks": {
+    "en": "Tasks",
+    "de": "Aufgaben"
+  },
+  "garden": {
+    "en": "Garden",
+    "de": "Garten"
+  },
+  "howToPlay": {
+    "en": "How To Play",
+    "de": "Wie Man Spielt"
+  },
+  "options": {
+    "en": "Options",
+    "de": "Optionen"
+  },
+  "madeWith": {
+    "en": "Made With",
+    "de": "Erstellt Mit"
+  }
+}

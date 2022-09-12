@@ -4,10 +4,12 @@
       <ul>
         <li v-for="herb in herbs" :key="herb.id">
           <div>
-            <p class="headline">{{ herb.title }}</p>
+            <p class="headline">
+              {{ translations[herb.title].title[language] }}
+            </p>
 
             <p>
-              {{ herb.description }}
+              {{ translations[herb.title].description[language] }}
             </p>
           </div>
         </li>
@@ -22,9 +24,17 @@
 import BackButton from "@/components/BackButton.vue";
 
 export default {
+  data() {
+    return {
+      translations: require("@/translations/Herbs.json"),
+    };
+  },
   computed: {
     herbs() {
       return this.$store.state.availableHerbs;
+    },
+    language() {
+      return this.$store.state.language;
     },
   },
   name: "AlmanachView",

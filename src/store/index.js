@@ -2,6 +2,7 @@ import { createStore } from "vuex";
 
 const getDefaultState = () => {
   return {
+    language: "de",
     feedbackText: "",
     availableHerbs: [],
     harvestedHerbs: [],
