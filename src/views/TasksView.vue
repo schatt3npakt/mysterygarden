@@ -14,13 +14,13 @@
           />
           <img v-else src="/img/ui-question.svg" alt="" />
 
-          <p>{{ herb.title }}</p>
+          <p>{{ herbTranslations[herb.title].title[language] }}</p>
         </li>
       </ul>
     </div>
 
     <div v-show="selectionIsOpen" class="solution-layer">
-      <p>Harvested Herbs</p>
+      <p>{{ translations.harvestedHerbs[language] }}</p>
       <div v-if="harvestedHerbs.length >= 1">
         <ul>
           <li
@@ -35,7 +35,7 @@
         </ul>
       </div>
       <div v-else>
-        <p>No herbs harvested yet!</p>
+        <p>{{ translations.noHerbsHarvested[language] }}</p>
       </div>
     </div>
 
@@ -53,6 +53,8 @@ export default {
     return {
       selectionIsOpen: false,
       activeTaskId: 0,
+      translations: require("@/translations/Tasks.json"),
+      herbTranslations: require("@/translations/Herbs.json"),
     };
   },
   computed: {
@@ -63,6 +65,9 @@ export default {
     },
     taskHerbs() {
       return this.$store.state.taskHerbs;
+    },
+    language() {
+      return this.$store.state.language;
     },
   },
   components: {

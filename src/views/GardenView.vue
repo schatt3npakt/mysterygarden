@@ -25,7 +25,7 @@
           :key="item.id"
         >
           <img :src="item.icon" alt="" />
-          <span>{{ item.title }}</span>
+          <span>{{ translations[item.title][language] }}</span>
         </button>
       </div>
     </div>
@@ -47,7 +47,12 @@
           :key="menuItem.id"
         >
           <img :src="menuItem.icon" alt="" />
-          <span v-if="menu.id !== 1">{{ menuItem.title }}</span>
+          <span v-if="menu.id === 2">{{
+            hydrationTranslations[menuItem.title][language]
+          }}</span>
+          <span v-else-if="menu.id === 3">{{
+            spellsTranslations[menuItem.title][language]
+          }}</span>
         </button>
       </div>
     </div>
@@ -75,9 +80,16 @@ export default {
     patches() {
       return this.$store.state.patches;
     },
+    language() {
+      return this.$store.state.language;
+    },
   },
   data: function () {
     return {
+      translations: require("@/translations/Garden.json"),
+      hydrationTranslations: require("@/translations/Hydrations.json"),
+      spellsTranslations: require("@/translations/Spells.json"),
+      actionFeedbackTranslations: require("@/translations/ActionFeedback.json"),
       showFeedbackText: false,
       menuIsOpen: false,
       activeMenu: 0,
@@ -101,22 +113,22 @@ export default {
       navigationItems: [
         {
           id: 0,
-          title: "Menu",
+          title: "menu",
           icon: require("@/assets/ui/ui-button-left.svg"),
         },
         {
           id: 1,
-          title: "Herbs",
+          title: "herbs",
           icon: "",
         },
         {
           id: 2,
-          title: "Hydration",
+          title: "hydration",
           icon: "",
         },
         {
           id: 3,
-          title: "Spells",
+          title: "spells",
           icon: "",
         },
       ],
@@ -157,7 +169,8 @@ export default {
         if (!harvestedHerbs.includes(thisPatch.state.plant.id)) {
           harvestedHerbs.push(thisPatch.state.plant.id);
         }
-        this.$store.state.feedbackText = "You harvested the herb!";
+        this.$store.state.feedbackText =
+          this.actionFeedbackTranslations.harvested[this.language];
         thisPatch.state.plant.state = 0;
         thisPatch.state.plant.id = 0;
         thisPatch.state.plant.stateBeforeDeath = 0;
@@ -167,7 +180,8 @@ export default {
 
       // if plant is dead
       if (thisPatch.state.plant.state === 4) {
-        this.$store.state.feedbackText = "Withered herb removed!";
+        this.$store.state.feedbackText =
+          this.actionFeedbackTranslations.witheredRemoved[this.language];
         thisPatch.state.plant.state = 0;
         thisPatch.state.plant.id = 0;
         thisPatch.state.plant.stateBeforeDeath = 0;
@@ -178,11 +192,13 @@ export default {
       // if seed is selected
       if (this.activeMenu === 1) {
         if (thisPatch.state.plant.state === 0) {
-          this.$store.state.feedbackText = "You planted the herb!";
+          this.$store.state.feedbackText =
+            this.actionFeedbackTranslations.herbPlanted[this.language];
           thisPatch.state.plant.state = 1;
           thisPatch.state.plant.id = this.selections[0].selected;
         } else {
-          this.$store.state.feedbackText = "This patch is already planted!";
+          this.$store.state.feedbackText =
+            this.actionFeedbackTranslations.alreadyPlanted[this.language];
           return;
         }
       }
@@ -200,16 +216,19 @@ export default {
             ].requirements.hydrationIds.includes(this.selections[1].selected)
           ) {
             thisPatch.state.plant.state = 2;
-            this.$store.state.feedbackText = "Your herb grew!";
+            this.$store.state.feedbackText =
+              this.actionFeedbackTranslations.herbGrew[this.language];
           } else {
             // kill plant
             thisPatch.state.plant.stateBeforeDeath =
               thisPatch.state.plant.state;
             thisPatch.state.plant.state = 4;
-            this.$store.state.feedbackText = "The plant withered...";
+            this.$store.state.feedbackText =
+              this.actionFeedbackTranslations.plantWithered[this.language];
           }
         } else {
-          this.$store.state.feedbackText = "You only have to water sprouts!";
+          this.$store.state.feedbackText =
+            this.actionFeedbackTranslations.onlyWaterSprouts[this.language];
         }
       }
 
@@ -223,17 +242,19 @@ export default {
             ].requirements.runeIds.includes(this.selections[2].selected)
           ) {
             thisPatch.state.plant.state = 3;
-            this.$store.state.feedbackText = "Your herb is fully grown!";
+            this.$store.state.feedbackText =
+              this.actionFeedbackTranslations.fullyGrown[this.language];
           } else {
             // kill plant
             thisPatch.state.plant.stateBeforeDeath =
               thisPatch.state.plant.state;
             thisPatch.state.plant.state = 4;
-            this.$store.state.feedbackText = "The plant withered...";
+            this.$store.state.feedbackText =
+              this.actionFeedbackTranslations.plantWithered[this.language];
           }
         } else {
           this.$store.state.feedbackText =
-            "You only have to cast spells on young plants!";
+            this.actionFeedbackTranslations.onlyCastOnYoung[this.language];
         }
       }
     },

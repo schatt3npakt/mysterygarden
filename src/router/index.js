@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import GardenView from "../views/GardenView.vue";
 import AlmanachView from "../views/AlmanachView.vue";
@@ -38,7 +38,7 @@ const routes = [
     component: HowToPlayView,
   },
   {
-    icon: "",
+    icon: require("@/assets/ui/ui-cog.png"),
     path: "/options",
     name: "options",
     component: OptionsView,
@@ -52,7 +52,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 

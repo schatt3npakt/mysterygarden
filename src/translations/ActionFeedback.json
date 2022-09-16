@@ -1,0 +1,38 @@
+{
+  "harvested": {
+    "en": "You harvested the herb!",
+    "de": "Du hast das Kraut geerntet!"
+  },
+  "witheredRemoved": {
+    "en": "You removed the withered herb!",
+    "de": "Du hast das verwelkte Kraut entfernt!"
+  },
+  "herbPlanted": {
+    "en": "You planted the herb!",
+    "de": "Du hast etwas gepflanzt!"
+  },
+  "alreadyPlanted": {
+    "en": "You can only plant on empty patches!",
+    "de": "Du kannst nur leere Beete bepflanzen!"
+  },
+  "herbGrew": {
+    "en": "Your herb grew!",
+    "de": "Das Kraut ist gewachsen!"
+  },
+  "plantWithered": {
+    "en": "Your herb withered...",
+    "de": "Das Kraut ist verwelkt..."
+  },
+  "onlyWaterSprouts": {
+    "en": "You only have to water sprouts!",
+    "de": "Du musst nur Setzlinge bewässern!"
+  },
+  "fullyGrown": {
+    "en": "Your herb is fully grown!",
+    "de": "Dein Kraut ist ausgewachsen!"
+  },
+  "onlyCastOnYoung": {
+    "en": "You only have to cast spells on young plants!",
+    "de": "Du musst nur Jungpflanzen verzaubern!"
+  }
+}

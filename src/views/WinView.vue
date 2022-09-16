@@ -3,9 +3,11 @@
     <div class="text">
       <img src="/img/ui-medal.svg" alt="" />
 
-      Amazing! <br />
+      {{ translations.amazing[language] }} <br />
 
-      <button @click="replayButtonClickHandler()">Replay</button>
+      <button @click="replayButtonClickHandler()">
+        {{ translations.replay[language] }}
+      </button>
     </div>
   </div>
 </template>
@@ -15,12 +17,22 @@ import router from "@/router";
 import { setRandomHerbs } from "@/herbService";
 
 export default {
+  data: function () {
+    return {
+      translations: require("@/translations/Win.json"),
+    };
+  },
   name: "WinView",
   methods: {
     replayButtonClickHandler() {
       this.$store.commit("resetState");
       router.push("/");
       setRandomHerbs(this.$store.state);
+    },
+  },
+  computed: {
+    language() {
+      return this.$store.state.language;
     },
   },
 };

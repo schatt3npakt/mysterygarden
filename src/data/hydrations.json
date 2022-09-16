@@ -1,22 +1,22 @@
 [
   {
     "id": 0,
-    "title": "Water",
+    "title": "water",
     "icon": "/img/beaker/icon-beaker-water.png"
   },
   {
     "id": 1,
-    "title": "Poison",
+    "title": "poison",
     "icon": "/img/beaker/icon-beaker-poison.png"
   },
   {
     "id": 2,
-    "title": "Mead",
+    "title": "mead",
     "icon": "/img/beaker/icon-beaker-mead.png"
   },
   {
     "id": 3,
-    "title": "Bloodsap",
+    "title": "bloodsap",
     "icon": "/img/beaker/icon-beaker-bloodsap.png"
   }
 ]

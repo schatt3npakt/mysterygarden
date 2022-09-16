@@ -1,0 +1,18 @@
+{
+  "blessing": {
+    "en": "Blessing",
+    "de": "Segnung"
+  },
+  "courage": {
+    "en": "Courage",
+    "de": "Mut"
+  },
+  "mindfulness": {
+    "en": "Mindfulness",
+    "de": "Bedachtheit"
+  },
+  "damnation": {
+    "en": "Damnation",
+    "de": "Verdammnis"
+  }
+}

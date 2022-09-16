@@ -18,7 +18,7 @@
 </template>
 
 <script>
-const hiddenRoutes = ["home", "win"];
+const hiddenRoutes = ["home", "win", "howToPlay"];
 
 export default {
   data() {
@@ -64,7 +64,6 @@ export default {
     row-gap: 80px;
 
     @media (min-width: 720px) {
-      grid-template-columns: repeat(3, 1fr);
       max-width: 450px;
     }
 
@@ -77,7 +76,7 @@ export default {
       &:focus,
       &:visited,
       &:active {
-        color: rgb(63, 165, 224) !important;
+        color: white !important;
       }
 
       &:hover,
@@ -99,8 +98,6 @@ export default {
       width: 100px;
       transform: scale(1);
       transition: transform 0.25s ease-in-out;
-      filter: drop-shadow(2px 0 0 white) drop-shadow(-2px 0 0 white)
-        drop-shadow(0 2px 0 white) drop-shadow(0 -2px 0 white);
 
       @media (min-width: 720px) {
         height: 90px;
@@ -112,8 +109,8 @@ export default {
 
       > img {
         display: block;
-        filter: drop-shadow(1px 0 0 white) drop-shadow(-1px 0 0 white)
-          drop-shadow(0 1px 0 white) drop-shadow(0 -1px 0 white);
+        filter: drop-shadow(2px 0 0 white) drop-shadow(-2px 0 0 white)
+          drop-shadow(0 2px 0 white) drop-shadow(0 -2px 0 white);
         left: 50%;
         width: 50px;
         height: 50px;
@@ -138,7 +135,7 @@ export default {
         left: 50%;
         transform: translateX(-50%);
         font-size: 20px;
-        font-weight: 900;
+        font-weight: 700;
         display: block;
         margin-top: 10px;
         white-space: nowrap;

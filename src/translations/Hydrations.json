@@ -1,0 +1,18 @@
+{
+  "water": {
+    "en": "Water",
+    "de": "Wasser"
+  },
+  "poison": {
+    "en": "Poison",
+    "de": "Gift"
+  },
+  "mead": {
+    "en": "Mead",
+    "de": "Met"
+  },
+  "bloodsap": {
+    "en": "Bloodsap",
+    "de": "Blutharz"
+  }
+}

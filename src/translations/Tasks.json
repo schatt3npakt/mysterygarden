@@ -1,0 +1,10 @@
+{
+  "harvestedHerbs": {
+    "en": "Harvested Herbs",
+    "de": "Geerntete Kräuter"
+  },
+  "noHerbsHarvested": {
+    "en": "No herbs harvested yet!",
+    "de": "Noch keine Kräuter geerntet!"
+  }
+}

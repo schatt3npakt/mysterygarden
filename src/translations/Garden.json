@@ -1,0 +1,18 @@
+{
+  "menu": {
+    "en": "Menu",
+    "de": "Menü"
+  },
+  "herbs": {
+    "en": "Herbs",
+    "de": "Kräuter"
+  },
+  "hydration": {
+    "en": "Hydrations",
+    "de": "Bewässerung"
+  },
+  "spells": {
+    "en": "Spells",
+    "de": "Zauber"
+  }
+}
