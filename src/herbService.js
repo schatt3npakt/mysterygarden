@@ -4,7 +4,7 @@ export function setRandomHerbs(state) {
   const herbs = require("@/data/herbs.json");
   // const selectedHerbs = shuffle(herbs.slice()).slice(0, 3);
   state.availableHerbs = herbs;
-  state.taskHerbs = shuffle(herbs.slice()).slice(0, 2);
+  state.taskHerbs = shuffle(herbs.slice()).slice(0, 1);
 }
 
 /**

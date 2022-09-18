@@ -1,0 +1,38 @@
+{
+  "startTutorial": {
+    "en": "Start Tutorial",
+    "de": "Tutorial starten"
+  },
+  "welcome": {
+    "en": "Welcome to Mystery Garden!",
+    "de": "Willkommen bei Mystery Garden!"
+  },
+  "clickOnTasks": {
+    "en": "Head over to \"Tasks\" to see what you have to do!",
+    "de": "Klicke auf \"Aufgaben\" und sieh dir an was zu tun ist."
+  },
+  "lookIntoAlmanach": {
+    "en": "Now look into the \"Almanach\" to learn about the herb you have to grow.",
+    "de": "Schau in das \"Kräuterbuch\" und lerne die Eigenschaften des Krauts das du anpflanzen sollst!"
+  },
+  "headToGarden": {
+    "en": "Let's head over to your garden and finally grow some herbs!",
+    "de": "Jetzt können wir in den \"Garten\" gehen und endlich ein paar Kräuter pflanzen!"
+  },
+  "didYouGetIt": {
+    "en": "Did you get it? Then click on \"Tasks\" and assign the correct herb!",
+    "de": "Hast du es gefunden? Dann klicke auf \"Aufgaben\" und weise das richtige Kraut zu!"
+  },
+  "gardenText": {
+    "en": "Let's plant some herbs! Open the item selections by double pressing menu items. Get started by planting a seed. If you think you harvested the right herb, head back to the main menu.",
+    "de": "Lass uns ein paar Kräuter pflanzen! Öffne die Auswahl indem du auf eins der Icons doppelklickst. Pfalnze als erstes einen Samen. Wenn du das richtige Kraut geerntet hast, kehre zum Hauptmenü zurück."
+  },
+  "herbToCollect": {
+    "en": "This is the herb you have to collect to win. We don't know anything besides the name yet, so let's head back to learn more!",
+    "de": "Dieses Kraut musst du anpflanzen um zu gewinnen. Bis jetzt wissen wir noch nichts ausser den Namen, also gehen wir erstmal zurück."
+  },
+  "clickOnTask": {
+    "en": "Now click on the task and assign the correct herb. If you're right, you win!",
+    "de": "Klicke jetzt auf deine Aufgabe und weise das richtige Kraut zu. Wenn es stimmt, gewinnst du!"
+  }
+}

@@ -19,7 +19,7 @@
       </ul>
     </div>
 
-    <div v-show="selectionIsOpen" class="solution-layer">
+    <HintLayer v-show="selectionIsOpen">
       <p>{{ translations.harvestedHerbs[language] }}</p>
       <div v-if="harvestedHerbs.length >= 1">
         <ul>
@@ -37,7 +37,19 @@
       <div v-else>
         <p>{{ translations.noHerbsHarvested[language] }}</p>
       </div>
-    </div>
+    </HintLayer>
+
+    <HintLayer v-if="tutorialClasses() === 'step-2'">
+      <p>
+        {{ tutorialTranslations["herbToCollect"][language] }}
+      </p>
+    </HintLayer>
+
+    <HintLayer v-if="tutorialClasses() === 'step-4'">
+      <p>
+        {{ tutorialTranslations["clickOnTask"][language] }}
+      </p>
+    </HintLayer>
 
     <BackButton />
   </div>
@@ -46,6 +58,7 @@
 <script>
 import BackButton from "@/components/BackButton.vue";
 import router from "@/router";
+import HintLayer from "@/components/HintLayer.vue";
 
 export default {
   name: "TasksView",
@@ -55,6 +68,7 @@ export default {
       activeTaskId: 0,
       translations: require("@/translations/Tasks.json"),
       herbTranslations: require("@/translations/Herbs.json"),
+      tutorialTranslations: require("@/translations/Tutorial.json"),
     };
   },
   computed: {
@@ -72,6 +86,7 @@ export default {
   },
   components: {
     BackButton,
+    HintLayer,
   },
   methods: {
     constructHerbImagePath(solutionId) {
@@ -80,6 +95,17 @@ export default {
     taskClickHandler(taskId) {
       this.selectionIsOpen = true;
       this.activeTaskId = taskId;
+
+      if (this.tutorialClasses() === "step-4") {
+        this.$store.state.tutorial = {
+          taskTutorialDone: false,
+          almanachTutorialDone: false,
+          gardenTutorialPlantedDone: false,
+          gardenTutorialHydrationDone: false,
+          gardenTutorialSpellsDone: false,
+          tutorialDone: true,
+        };
+      }
     },
     harvestedHerbClickHandler(herbId) {
       // Search for index of task with currently selected id
@@ -105,6 +131,30 @@ export default {
         router.push("/win");
       }
     },
+    tutorialClasses() {
+      const tutorialState = this.$store.state.tutorial;
+
+      if (tutorialState.tutorialDone) {
+        return true;
+      } else if (tutorialState.gardenTutorialSpellsDone) {
+        return "step-4";
+      } else if (tutorialState.almanachTutorialDone) {
+        return "step-3";
+      } else if (tutorialState.taskTutorialDone) {
+        return "step-2";
+      } else {
+        return "step-1";
+      }
+    },
+  },
+  mounted: function () {
+    const tutorialState = this.$store.state.tutorial;
+
+    if (tutorialState.tutorialDone === false) {
+      if (tutorialState.taskTutorialDone === false) {
+        tutorialState.taskTutorialDone = true;
+      }
+    }
   },
 };
 </script>
@@ -173,30 +223,7 @@ export default {
   }
 }
 
-.solution-layer {
-  position: fixed;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100vw - 70px);
-  background-color: rgb(63, 165, 224);
-  border: 3px solid white;
-  border-radius: 15px;
-  box-shadow: 0 0 15px 15px rgba(37, 34, 49, 0.1);
-  padding: 15px;
-
-  @media (min-width: 720px) {
-    max-width: 720px;
-    margin: auto;
-  }
-
-  p {
-    margin-top: 0;
-    color: white;
-    font-weight: 900;
-    font-size: 20px;
-  }
-
+.hint-layer {
   ul {
     list-style-type: none;
     margin: 0;

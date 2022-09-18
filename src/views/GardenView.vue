@@ -17,7 +17,7 @@
     <GardenFence />
 
     <div class="ui">
-      <div class="ui__inner">
+      <div class="ui__inner" :class="tutorialClasses()">
         <button
           :class="{ active: activeMenu === item.id && item.id !== 0 }"
           @click="navItemClickHandler(item.id)"
@@ -56,6 +56,12 @@
         </button>
       </div>
     </div>
+
+    <HintLayer v-if="tutorialClasses() === 'step-3'">
+      <p>
+        {{ tutorialTranslations["gardenText"][language] }}
+      </p>
+    </HintLayer>
   </div>
 </template>
 
@@ -66,6 +72,7 @@ import GardenFence from "@/components/garden/GardenFence.vue";
 import GardenFireflies from "@/components/garden/GardenFireflies.vue";
 import GardenPatches from "@/components/garden/GardenPatches.vue";
 import GardenFeeedbackText from "@/components/garden/GardenFeeedbackText.vue";
+import HintLayer from "@/components/HintLayer.vue";
 
 export default {
   name: "GardenView",
@@ -75,6 +82,7 @@ export default {
     GardenFence,
     GardenFireflies,
     GardenPatches,
+    HintLayer,
   },
   computed: {
     patches() {
@@ -87,6 +95,7 @@ export default {
   data: function () {
     return {
       translations: require("@/translations/Garden.json"),
+      tutorialTranslations: require("@/translations/Tutorial.json"),
       hydrationTranslations: require("@/translations/Hydrations.json"),
       spellsTranslations: require("@/translations/Spells.json"),
       actionFeedbackTranslations: require("@/translations/ActionFeedback.json"),
@@ -272,6 +281,10 @@ export default {
       } else {
         this.menuIsOpen = true;
       }
+
+      if (this.$store.state.tutorial.gardenTutorialSpellsDone === false) {
+        this.$store.state.tutorial.gardenTutorialSpellsDone = true;
+      }
     },
     menuItemClickHandler(menuId, menuItemId) {
       this.selections[menuId - 1].selected = menuItemId;
@@ -309,6 +322,25 @@ export default {
 
         default:
           return "";
+      }
+    },
+    tutorialClasses() {
+      const tutorialState = this.$store.state.tutorial;
+
+      if (tutorialState.tutorialDone) {
+        return true;
+      } else if (tutorialState.gardenTutorialSpellsDone) {
+        return "step-4-3";
+      } else if (tutorialState.gardenTutorialHydrationDone) {
+        return "step-4-2";
+      } else if (tutorialState.gardenTutorialPlantedDone) {
+        return "step-4-1";
+      } else if (tutorialState.almanachTutorialDone) {
+        return "step-3";
+      } else if (tutorialState.taskTutorialDone) {
+        return "step-2";
+      } else {
+        return "step-1";
       }
     },
   },
@@ -531,5 +563,9 @@ export default {
     opacity: 0.75;
     z-index: zIndex.$gardenNightlayer;
   }
+}
+
+.hint-layer {
+  bottom: 140px;
 }
 </style>

@@ -27,6 +27,7 @@ export default {
   data() {
     return {
       translations: require("@/translations/Herbs.json"),
+      showTutorial: true,
     };
   },
   computed: {
@@ -36,10 +37,22 @@ export default {
     language() {
       return this.$store.state.language;
     },
+    tutorialDone() {
+      return this.$store.state.tutorial.tutorialDone;
+    },
   },
   name: "AlmanachView",
   components: {
     BackButton,
+  },
+  mounted: function () {
+    const tutorialState = this.$store.state.tutorial;
+
+    if (tutorialState.tutorialDone === false) {
+      if (tutorialState.almanachTutorialDone === false) {
+        tutorialState.almanachTutorialDone = true;
+      }
+    }
   },
 };
 </script>
@@ -86,9 +99,14 @@ export default {
           text-align: left;
           font-size: 18px;
 
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
           &.headline {
             font-weight: 900;
             font-size: 22px;
+            margin-top: 0;
           }
         }
       }

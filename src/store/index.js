@@ -2,6 +2,14 @@ import { createStore } from "vuex";
 
 const getDefaultState = () => {
   return {
+    tutorial: {
+      taskTutorialDone: false,
+      almanachTutorialDone: false,
+      gardenTutorialPlantedDone: false,
+      gardenTutorialHydrationDone: false,
+      gardenTutorialSpellsDone: false,
+      tutorialDone: true,
+    },
     language: "de",
     feedbackText: "",
     availableHerbs: [],
