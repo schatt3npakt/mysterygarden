@@ -26,14 +26,12 @@ import BackButton from "@/components/BackButton.vue";
 export default {
   data() {
     return {
+      herbs: this.$store.state.availableHerbs,
       translations: require("@/translations/Herbs.json"),
       showTutorial: true,
     };
   },
   computed: {
-    herbs() {
-      return this.$store.state.availableHerbs;
-    },
     language() {
       return this.$store.state.language;
     },

@@ -13,6 +13,7 @@ const getDefaultState = () => {
     language: "de",
     feedbackText: "",
     availableHerbs: [],
+    almanachHerbs: [],
     harvestedHerbs: [],
     taskHerbs: [],
     patches: [

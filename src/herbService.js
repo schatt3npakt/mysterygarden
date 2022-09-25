@@ -5,6 +5,7 @@ export function setRandomHerbs(state) {
   // const selectedHerbs = shuffle(herbs.slice()).slice(0, 3);
   state.availableHerbs = herbs;
   state.taskHerbs = shuffle(herbs.slice()).slice(0, 1);
+  state.almanachHerbs = shuffle(herbs);
 }
 
 /**
